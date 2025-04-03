@@ -23,18 +23,12 @@ vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
 
 vim.o.updatetime = 500 -- Tempo de espera reduzido para 500ms
 
-require'lspconfig'.intelephense.setup{
-	cmd = { "intelephense", "--stdio" },  -- Ensure --stdio is used
-	filetypes = { "php" },
-	root_dir = require'lspconfig'.util.root_pattern("composer.json", ".git"),
-}
-
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 lspconfig.intelephense.setup {
 	cmd = { "intelephense", "--stdio" },
 	filetypes = { "php" },
 	capabilities = capabilities,
-	root_dir = lspconfig.util.root_pattern("composer.json", ".git", "."),
+	root_dir = lspconfig.util.root_pattern("composer.json", ".git"),
 	settings = {
 		intelephense = {
 			stubs = {
