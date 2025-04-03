@@ -43,7 +43,7 @@ lspconfig.intelephense.setup {
 				"libxml", "mbstring", "openssl", "pcre", "PDO",
 				"pdo_mysql", "Phar", "readline", "Reflection", "session",
 				"SimpleXML", "sodium", "SPL", "standard", "tokenizer", "xml",
-				"xdebug", "zip", "zlib", "wordpress", "woocommerce"
+				"xdebug", "zip", "zlib", "wordpress", "woocommerce", "laravel"
 			},
 			files = {
 				maxSize = 1000000;
