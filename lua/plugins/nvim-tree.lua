@@ -9,8 +9,8 @@ require("nvim-tree").setup({
 				file = true,
 				folder = true,
 				folder_arrow = true,
-		git = true,
-		modified = true
+				git = true,
+				modified = true
 			},
 		},
 	},
