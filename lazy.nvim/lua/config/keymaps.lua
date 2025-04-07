@@ -33,3 +33,8 @@ vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { silent = true, desc = "Ir pa
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, { silent = true, desc = "Mostrar documentação do símbolo" })
 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { silent = true, desc = "Renomear símbolo" })
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { silent = true, desc = "Ações de código" })
+
+vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<cr>', { desc = 'Procurar ficheiros' })
+vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', { desc = 'Grep nos ficheiros' })
+vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<cr>', { desc = 'Listar buffers' })
+vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', { desc = 'Procurar ajuda' })

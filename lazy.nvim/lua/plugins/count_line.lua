@@ -6,7 +6,7 @@ return {
 	  local f = require("ft_count_line")
 
 	  vim.api.nvim_create_autocmd({ "BufWritePost", "BufEnter", "BufWinEnter" }, {
-		pattern = "*.c",
+		pattern = {"*.c", "*.cpp"},
 		callback = function()
 		  f.show_virtual_text()
 		end,

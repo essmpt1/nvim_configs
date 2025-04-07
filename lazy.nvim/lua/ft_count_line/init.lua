@@ -22,7 +22,8 @@ function M.show_virtual_text()
 	local bufnr = vim.api.nvim_get_current_buf()
 	vim.api.nvim_buf_clear_namespace(bufnr, ns_id, 0, -1)
 
-	local lang = vim.treesitter.language.get_lang("c")
+	local ft = vim.bo.filetype
+	local lang = vim.treesitter.language.get_lang(ft)
 	local parser = vim.treesitter.get_parser(bufnr, lang)
 	local tree = parser:parse()[1]
 	local root = tree:root()

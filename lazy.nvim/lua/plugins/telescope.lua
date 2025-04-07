@@ -7,6 +7,6 @@ return {
 		'nvim-treesitter/nvim-treesitter',
 	},
 	config = function()
-		require('telescope').setup()
+		require('telescope').setup({})
 	end
 }
