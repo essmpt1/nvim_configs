@@ -28,3 +28,8 @@ vim.keymap.set('n', '<leader>gc', ':Telescope git_commits<CR>', { silent = true,
 vim.keymap.set('n', '<leader>gf', ':DiffviewFileHistory %<CR>', { silent = true, desc="Histórico de commits do arquivo atual" })
 vim.keymap.set('n', '<leader>gd', ':DiffviewOpen<CR>', { silent = true, desc="Abrir visualização detalhada de diffs" })
 vim.keymap.set('n', '<leader>gq', ':DiffviewClose<CR>', { silent = true, desc="Fechar a visualização do Diffview" })
+
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { silent = true, desc = "Ir para a definição" })
+vim.keymap.set('n', 'K', vim.lsp.buf.hover, { silent = true, desc = "Mostrar documentação do símbolo" })
+vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { silent = true, desc = "Renomear símbolo" })
+vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { silent = true, desc = "Ações de código" })

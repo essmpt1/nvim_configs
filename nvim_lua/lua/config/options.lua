@@ -19,6 +19,12 @@ opt.softtabstop = 4            -- Espaços simulando tab
 opt.expandtab = false          -- Não converter tab em espaços
 opt.smartindent = true         -- Indentação automática inteligente
 
+opt.updatetime = 500 -- tempo para aparecer o buffer das funções
+
+-- Tempo de espera para mapeamentos compostos (como <Leader>)
+opt.timeout = true             -- Ativar espera para combinações de teclas
+opt.timeoutlen = 300           -- Tempo máximo (ms) entre teclas de um atalho
+
 vim.diagnostic.config({
 	virtual_text = true, -- Mostra diagnósticos diretamente no código
 	signs = true,        -- Mostra ícones na coluna lateral
