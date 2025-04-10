@@ -38,3 +38,6 @@ vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<cr>', { desc = 'Pro
 vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', { desc = 'Grep nos ficheiros' })
 vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<cr>', { desc = 'Listar buffers' })
 vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', { desc = 'Procurar ajuda' })
+
+vim.keymap.set("n", "<leader>fo", ":CFormatter42<CR>", { desc = "Formatar com 42 formatter" })
+vim.keymap.set("n", "<leader>h", ":Stdheader<CR>", { desc = "Coloca o header da 42" })
