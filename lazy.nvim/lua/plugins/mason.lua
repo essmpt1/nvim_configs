@@ -17,13 +17,19 @@ return {
 					})
 				end,
 				["clangd"] = function()
-					require("lspconfig").clangd.setup({
-						cmd = { "clangd" }, -- Caminho para o executável clangd
+					local lspconfig = require("lspconfig")
+					local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+					lspconfig.clangd.setup({
+						cmd = { "clangd", }, -- Caminho para o executável clangd
 						--document_formatting = false,
 						filetypes = { "c", "cpp", "objc", "objcpp", "h", "hpp" }, -- Tipos de arquivos suportados
-						root_dir = require("lspconfig").util.root_pattern("compile_commands.json", ".git"), -- Diretório raiz do projeto
+						root_dir = lspconfig.util.root_pattern("compile_commands.json", ".git"), -- Diretório raiz do projeto
 						single_file_support = true, -- Suporte para arquivos isolados
-						capabilities = require('cmp_nvim_lsp').default_capabilities(), -- Suporte para autocomplete avançado
+						capabilities = capabilities, -- Suporte para autocomplete avançado
+						init_options = {
+							inlayHints = true, -- Ativa hints no init (para clangd >= 15)
+						},
 						on_attach = function(client, bufnr)
 							-- Ativa popups automáticas quando o cursor para em uma função
 							vim.api.nvim_create_autocmd("CursorHold", {
@@ -32,9 +38,9 @@ return {
 									vim.lsp.buf.hover()
 								end,
 							})
-							-- Ativa o inlay Hint
+							-- Inlay hints (Neovim 0.10+)
 							if client.server_capabilities.inlayHintProvider then
-								vim.lsp.inlay_hint.enable()
+								vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
 							end
 						end
 					})
