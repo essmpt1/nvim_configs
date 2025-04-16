@@ -29,17 +29,17 @@ function M.show_virtual_text()
 	local root = tree:root()
 
 	for node in root:iter_children() do
-	if is_function_node(node) then
-		local name = get_function_name(node)
-		local lines = count_function_lines(node)
-		local _, _, end_row, _ = node:range()
-		local msg = string.format("↳ '%s' tem %d linhas", name, lines)
+		if is_function_node(node) then
+			local name = get_function_name(node)
+			local lines = count_function_lines(node)
+			local _, _, end_row, _ = node:range()
+			local msg = string.format("↳ '%s' tem %d linhas", name, lines)
 
-		vim.api.nvim_buf_set_extmark(bufnr, ns_id, end_row, 0, {
-		virt_text = { { msg, "Comment" } },
-		virt_text_pos = "eol",
+			vim.api.nvim_buf_set_extmark(bufnr, ns_id, end_row, 0, {
+			virt_text = { { msg, "Comment" } },
+			virt_text_pos = "eol",
 		})
-	end
+		end
 	end
 end
 
