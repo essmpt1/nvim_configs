@@ -7,6 +7,7 @@ return {
 				ensure_installed = { "c", "cpp", "lua", "vim", "json", "markdown", "markdown_inline" },
 				highlight = { enable = true },
 				indent = { enable = true },
+				additional_vim_regex_highlighting = false,
 			})
 	end,
 }

@@ -31,3 +31,5 @@ vim.diagnostic.config({
 	underline = true,    -- Sublinhar erros e avisos
 	update_in_insert = false, -- Não mostrar diagnósticos enquanto digita
 })
+
+vim.cmd.colorscheme("tokyonight")

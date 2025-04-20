@@ -15,6 +15,6 @@ return {
 			vim.g.gruvbox_material_foreground = "material"  -- ou "mix", "original"
 
 			-- Aplicar o esquema de cores
-			vim.cmd.colorscheme("gruvbox-material")
+--			vim.cmd.colorscheme("gruvbox-material")
 		end
 	}
