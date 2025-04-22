@@ -25,6 +25,9 @@ opt.updatetime = 500 -- tempo para aparecer o buffer das funções
 opt.timeout = true             -- Ativar espera para combinações de teclas
 opt.timeoutlen = 300           -- Tempo máximo (ms) entre teclas de um atalho
 
+opt.showmode = false -- Dont show mode since we have a statusline
+opt.termguicolors = true       -- True color support
+
 vim.diagnostic.config({
 	virtual_text = true, -- Mostra diagnósticos diretamente no código
 	signs = true,        -- Mostra ícones na coluna lateral
