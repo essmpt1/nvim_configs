@@ -14,7 +14,8 @@ return {
 		},
 	},
 	init = function()
-		vim.opt.termguicolors = true
-		vim.opt.background = "dark" -- "light"
+		-- vim.opt.termguicolors = true
+		-- vim.opt.background = "dark" -- "light"
+		-- vim.cmd.colorscheme("tokyonight")
 	end
 }

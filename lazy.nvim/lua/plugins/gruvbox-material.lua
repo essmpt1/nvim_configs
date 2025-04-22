@@ -4,10 +4,10 @@ return {
 		priority = 1000,
 		config = function()
 			-- Ativar cores verdadeiras
-			vim.opt.termguicolors = true
+			--vim.opt.termguicolors = true
 
 			-- Tema com fundo escuro
-			vim.opt.background = "dark"
+			-- vim.opt.background = "dark"
 
 			vim.g.gruvbox_material_background = "medium"  -- ou "soft", "hard"
 			vim.g.gruvbox_material_enable_bold = 1
